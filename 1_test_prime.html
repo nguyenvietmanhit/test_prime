@@ -10,8 +10,10 @@
         return is_prime;
     }
 
-    while(true) {
-        var number = prompt('Nhập số cần kiểm tra có phải số nguyên tố hay không:');
+    var count = 1;
+    while(count <= 5) {
+        count++;
+        var number = prompt('Nhập số cần kiểm tra có phải số nguyên tố hay không: (thực hiện tối đa 5 lần:');
         if (!number || isNaN(number)) {
             alert('Cần nhập số');
             continue;
