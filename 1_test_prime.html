@@ -1,0 +1,25 @@
+<script>
+    function isPrime(number) {
+        var is_prime = true;
+        for (var i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                is_prime = false;
+                break;
+            }
+        }
+        return is_prime;
+    }
+
+    while(true) {
+        var number = prompt('Nhập số cần kiểm tra có phải số nguyên tố hay không:');
+        if (!number || isNaN(number)) {
+            alert('Cần nhập số');
+            continue;
+        }
+        if (isPrime(number)) {
+            alert(number + ' là số nguyên tố');
+        } else {
+            alert(number + ' không phải số nguyên tố');
+        }
+    }
+</script>
